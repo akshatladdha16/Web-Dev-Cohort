@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch api</title>
+</head>
+<body>
+    <script>
+        function getAnimalData(){
+            fetch("https://fakerapi.it/api/v1/persons").then(function(response){
+                response.json().then(function(finaldata){
+                    console.log(finaldata);
+                })
+            })
+        }
+        ///better way to handle async operations like fetching data from 3rd party is to use async and await
+        function getAnimalData2(){
+            const response2=await fetch("https://fakerapi.it/api/v1/persons");
+            const finaldata2=response2.json();
+            console.log(finaldata2);
+        }
+
+    </script>
+    <button onclick="getAnimalData()">Get Animal Data</button>
+</body>
+</html>
