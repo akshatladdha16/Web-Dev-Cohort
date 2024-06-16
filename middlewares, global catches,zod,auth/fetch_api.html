@@ -15,9 +15,9 @@
             })
         }
         ///better way to handle async operations like fetching data from 3rd party is to use async and await
-        function getAnimalData2(){
-            const response2=await fetch("https://fakerapi.it/api/v1/persons");
-            const finaldata2=response2.json();
+        async function getAnimalData2(){
+            const response2= await fetch("https://fakerapi.it/api/v1/persons");
+            const finaldata2=await response2.json();
             console.log(finaldata2);
         }
 

@@ -22,7 +22,7 @@ app.post('/health',(req,res)=>{
     }
     else{
         res.json({
-            response
+            msg:"correct kidney"
         })
     }
 })
