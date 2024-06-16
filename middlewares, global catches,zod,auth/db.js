@@ -5,7 +5,7 @@ app.use(express.json());
 
 const mongoose=require("mongoose");
 const { string } = require("zod");
-mongoose.connect("mongodb+srv://akshat_laddha16:aM0pM36sYHBJ8dZo@cluster0.uhtjlhp.mongodb.net/")
+mongoose.connect("<connection url paste here>")
 
 //describing the model
 const User =mongoose.model('Users',{
