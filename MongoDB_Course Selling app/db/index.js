@@ -3,7 +3,7 @@
 const mongoose=require("mongoose");
 
 //connect to mongoose 
-mongoose.connect('mongodb+srv://akshat_laddha16:aM0pM36sYHBJ8dZo@cluster0.uhtjlhp.mongodb.net/');
+mongoose.connect('insert connection link here ');
 
 //defining schemas
 //1. admin
