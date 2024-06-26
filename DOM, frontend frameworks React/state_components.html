@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Components in React</title>
+</head>
+<body>
+    <div id="buttonparent">
+    </div>
+    <script>
+
+        /// state and components without using react library , written in pure javascript
+        let state={
+            count:1
+        }//mainting the state of app here 
+
+        //state update function
+        function onbuttonpress(){
+            state.count++;
+            btncomponentrerender();
+        }
+        //re-rendiering : to be taken care by react: whenever there's any update in state of the app 
+        function btncomponentrerender(){ 
+            document.getElementById("buttonparent").innerHTML=""; //empty the exisiting button for new updates in state and then 
+            const component=buttoncomponent(state.count); //here update the state of the app
+            document.getElementById("buttonparent").appendChild(component); 
+        }
+        //component : where the dynamic html is shown
+        function buttoncomponent(count){
+            const button=document.createElement("button");
+            button.innerHTML=`Counter ${count}`;
+            button.setAttribute("onclick",'onbuttonpress()');
+            return button;
+        }
+
+        btncomponentrerender();
+    </script>
+</body>
+</html>
