@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.post('/todo', async (req,res)=>{
     const createpayload=req.body;
-    const safeload=createTodo.safeParse()
+    const safeload=createTodo.safeParse(createpayload);
     if(!safeload.success){
         res.status(411).json({
             msg:"invalid input"
