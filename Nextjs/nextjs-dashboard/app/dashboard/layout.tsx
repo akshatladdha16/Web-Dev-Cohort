@@ -1,5 +1,6 @@
 import SideNav from '@/app/ui/dashboard/sidenav';
- 
+export const experimental_ppr=true;
+
 export default function Layout({ children }: { children: React.ReactNode }) {
     // It is a way of destructuring the props and annotating their types. like this we can directly use children instead of props.children
     //Type Annotation: The : { children: React.ReactNode } is a TypeScript type annotation. It specifies that the children prop should be of the type React.ReactNode.
