@@ -13,6 +13,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
     const params=new URLSearchParams(searchParams); 
     console.log(`Searching... ${term}`);
     /// to capture the input and show it in url: URLSearchParams is a web api provides utility methods for manipulating url
+    params.set('page','1');
     if(term){
       params.set('query',term)
     }else{
